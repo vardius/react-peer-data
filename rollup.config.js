@@ -9,6 +9,7 @@ const external = [
   ...Object.keys(pkg.dependencies || {}),
   ...Object.keys(pkg.peerDependencies || {}),
 ];
+let override = { compilerOptions: { jsx: 'react' } };
 
 const plugins = [
   sourcemaps(),
@@ -19,6 +20,7 @@ const plugins = [
     clean: true,
     rollupCommonJSResolveHack: true,
     exclude: ['*.d.ts', '**/*.d.ts'],
+    tsconfigOverride: override,
   }),
   commonjs(),
 ];
