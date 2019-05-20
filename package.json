@@ -1,6 +1,6 @@
 {
   "name": "react-peer-data",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React wrapper for PeerData library for files, media streaming/sharing using WebRTC",
   "author": {
     "name": "Rafał Lorenz",
