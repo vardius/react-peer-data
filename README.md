@@ -47,13 +47,10 @@ HOW TO USE
 npm install react-peer-data
 ```
 ### Examples
-```bash
-npm install react-peer-data
-```
 #### Hook
-HOOK
+TODO
 #### HOC
-HOC
+TODO
 
 License
 -------
