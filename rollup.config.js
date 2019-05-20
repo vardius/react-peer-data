@@ -13,9 +13,7 @@ let override = { compilerOptions: { jsx: 'react' } };
 
 const plugins = [
   sourcemaps(),
-  resolve({
-    mainFields: ['module', 'main', 'jsnext']
-  }),
+  resolve(),
   typescript({
     clean: true,
     rollupCommonJSResolveHack: true,
@@ -41,7 +39,7 @@ const config = {
       name: pkg.name,
       exports: 'named',
       file: pkg.main,
-      format: "umd",
+      format: "cjs",
       sourcemap: true
     },
   ]
