@@ -13,7 +13,9 @@ let override = { compilerOptions: { jsx: 'react' } };
 
 const plugins = [
   sourcemaps(),
-  resolve(),
+  resolve({
+    mainFields: ['module', 'main', 'browser', 'jsnext']
+  }),
   typescript({
     clean: true,
     rollupCommonJSResolveHack: true,
