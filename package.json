@@ -14,13 +14,13 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
-  "types": "dist/src/index.d.ts",
+  "types": "dist/index.d.ts",
   "peerDependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "dependencies": {
-    "peer-data": "^3.0.28"
+    "peer-data": "^3.0.29"
   },
   "devDependencies": {
     "@types/jest": "^24.0.13",
