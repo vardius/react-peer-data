@@ -19,7 +19,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react",
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
