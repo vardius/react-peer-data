@@ -6132,9 +6132,9 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-peer-data@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/peer-data/-/peer-data-3.1.1.tgz#28dc4e3e84471fd789c0c55253e648769ea87f5f"
+peer-data@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/peer-data/-/peer-data-3.1.2.tgz#d8f95b55b1b241b019751d58bef7eaae3beb52c8"
 
 performance-now@^2.1.0:
   version "2.1.0"
