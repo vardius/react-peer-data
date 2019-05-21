@@ -10,7 +10,6 @@ React WebRTC - PeerData
   <summary>Table of Content</summary>
 
 <!-- toc -->
-
 - [About](#about)
 - [How to use](#how-to-use)
   - [Installation](#installation)
@@ -41,16 +40,76 @@ We are using the github [issue tracker](https://github.com/vardius/react-peer-da
 HOW TO USE
 ==================================================
 
+1. [Chat Example](https://github.com/vardius/react-webrtc-chat)
+
 ## Getting started
 ### Installation
 ```bash
 npm install react-peer-data
 ```
 ### Examples
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { PeerDataProvider } from 'react-peer-data';
+
+import App from './App';
+
+ReactDOM.render(
+    <PeerDataProvider
+        servers={{ iceServers: [{ url: "stun:stun.1.google.com:19302" }] }}
+        constraints={{ ordered: true }}
+    >
+        <App />
+    </PeerDataProvider>,
+    document.getElementById("root")
+);
+```
 #### Hook
-TODO
+```
+import React, { useEffect } from 'react';
+import { usePeerData } from 'react-peer-data';
+
+function App() {
+  const peerData = usePeerData();
+
+  useEffect(() => {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+      const room = peerData.connect('my-room', stream);
+      room
+        .on("participant", participant => {
+            participant
+                .on("disconnected", () => { console.log('disconnected', participant.id); })
+                .on("track", event => { console.log('stream', participant.id, event.streams[0]); })
+                .on("message", payload => { console.log(participant.id, payload); })
+                .on("error", event => {
+                    console.error('peer', participant.id, event);
+                    participant.renegotiate();
+                });
+        })
+        .on("error", event => { console.error('room', name, event); });
+
+      return () => room.disconnect()
+  }, [peerData]);
+
+  return null; // @TODO: render participants
+}
+
+export default App;
+```
 #### HOC
-TODO
+```
+import React from 'react';
+import { withPeerData } from 'react-peer-data';
+
+function App({ peerData }) {
+  // follow example from above
+
+  return null; // @TODO: render participants
+}
+
+export default withPeerData(App);
+```
 
 License
 -------

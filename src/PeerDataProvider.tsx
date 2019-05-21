@@ -6,9 +6,9 @@ import useSignaling, { Options } from './useSignaling';
 export interface Props {
     locale: string;
     children: ReactNode;
-    servers: RTCConfiguration,
-    constraints: RTCDataChannelInit,
-    signaling: Options,
+    servers?: RTCConfiguration,
+    constraints?: RTCDataChannelInit,
+    signaling?: Options,
 }
 
 function PeerDataProvider({ children, servers, constraints, signaling = {} }: Props) {
