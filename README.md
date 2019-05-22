@@ -48,7 +48,8 @@ HOW TO USE
 npm install react-peer-data
 ```
 ### Examples
-```
+Use `PeerDataProvider` to instantiate and pass peerData object down the component tree
+```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { PeerDataProvider } from 'react-peer-data';
@@ -65,8 +66,9 @@ ReactDOM.render(
     document.getElementById("root")
 );
 ```
+You can access peerData context value in two ways:
 #### Hook
-```
+```javascript
 import React, { useEffect } from 'react';
 import { usePeerData } from 'react-peer-data';
 
@@ -98,7 +100,7 @@ function App() {
 export default App;
 ```
 #### HOC
-```
+```javascript
 import React from 'react';
 import { withPeerData } from 'react-peer-data';
 
