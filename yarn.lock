@@ -6236,9 +6236,9 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-peer-data@^3.1.5:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/peer-data/-/peer-data-3.1.5.tgz#9af5db5b14b0a9f32042037c39ffe2f05883e914"
+peer-data@^3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/peer-data/-/peer-data-3.1.6.tgz#2d8230b962fde7b1f5c58b0e22e6773266385f7c"
   dependencies:
     socket.io-client "^2.0.3"
     webrtc-adapter "^7.2.3"
