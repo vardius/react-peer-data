@@ -3,6 +3,7 @@
     "outDir": "build",
     "target": "es5",
     "sourceMap": true,
+    "declaration": true,
     "lib": [
       "dom",
       "dom.iterable",
