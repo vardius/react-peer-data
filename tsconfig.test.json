@@ -1,9 +1,9 @@
 {
-    "extends": "./tsconfig.json",
-    "declaration": false,
-    "isolatedModules": true,
+    "extends": "./tsconfig.prod.json",
     "compilerOptions": {
         "module": "commonjs",
         "jsx": "preserve",
+        "declaration": false,
+        "isolatedModules": true,
     }
 }

@@ -39,9 +39,9 @@
     "typescript": "^3.4.5"
   },
   "scripts": {
-    "test": "react-scripts test --env=jsdom --coverage",
-    "test:watch": "react-scripts test --env=jsdom",
-    "build": "rollup -c",
+    "test": "cp -f ./tsconfig.test.json ./tsconfig.json && react-scripts test --env=jsdom --coverage",
+    "test:watch": "cp -f ./tsconfig.test.json ./tsconfig.json && CI=true react-scripts test --env=jsdom",
+    "build": "cp -f ./tsconfig.prod.json ./tsconfig.json && rollup -c",
     "clean": "rimraf dist es lib coverage",
     "prepare": "yarn build",
     "prebuild": "yarn clean",
