@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { SocketChannel } from "peer-data";
-import type { EventDispatcher } from "peer-data";
+import { SocketChannel, EventDispatcher } from "peer-data";
 
 export interface Options {
     dispatcher: EventDispatcher
