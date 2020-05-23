@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
-import PeerData from 'peer-data';
+import PeerData, { EventDispatcher } from 'peer-data';
 import PeerDataContext from './PeerDataContext';
-import useSignaling, { Options } from './useSignaling';
+import useSignaling, {Options} from './useSignaling';
 
 export interface Props {
     children: ReactNode;
@@ -10,11 +10,11 @@ export interface Props {
     signaling?: Options,
 }
 
-function PeerDataProvider({ children, servers, constraints, signaling = {} }: Props) {
+function PeerDataProvider({ children, servers, constraints, signaling = {dispatcher: new EventDispatcher()} }: Props) {
     useSignaling(signaling);
 
     return (
-        <PeerDataContext.Provider value={new PeerData(servers, constraints)}>
+        <PeerDataContext.Provider value={new PeerData(signaling.dispatcher, servers, constraints)}>
             {React.Children.only(children)}
         </PeerDataContext.Provider>
     );
