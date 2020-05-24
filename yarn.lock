@@ -6251,10 +6251,10 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-peer-data@^3.2.3:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/peer-data/-/peer-data-3.2.3.tgz#61b061adc98f39a96cb15c5609f95550e3c5eb61"
-  integrity sha512-Kk+dLAbMp0Mc98ns6M6BOYRjdsSQ7kR4NL3HpoNWOYBdjNvFdfUEbBCCoLppUiKqZIBf47sZXj6C30n9lmvLdQ==
+peer-data@^3.2.4:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/peer-data/-/peer-data-3.2.4.tgz#23509c169b224a1ab8d455584c8c0a283e20d03d"
+  integrity sha512-WE77pxW09i1MKV800LVcQw0OHK8aFw5PQaB47IOVhoTYWKkSL7yMPoBoIh5JYHLoyAhfOjRLKe6FD5uUOR2/rw==
   dependencies:
     "@types/uuid" "^8.0.0"
     socket.io-client "^2.3.0"
