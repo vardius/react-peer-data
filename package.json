@@ -20,7 +20,7 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
-    "peer-data": "^3.2.1"
+    "peer-data": "^3.2.2"
   },
   "devDependencies": {
     "@types/jest": "^24.0.13",
